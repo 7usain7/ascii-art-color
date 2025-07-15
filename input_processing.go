@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"slices"
 	"strings"
 )
 
@@ -66,12 +67,7 @@ func substr_indexes(str string, substr string) []int {
 }
 
 func containts_index(num int, indexes []int) bool {
-	for _, val := range indexes {
-		if val == num {
-			return true
-		}
-	}
-	return false
+	return slices.Contains(indexes, num)
 }
 
 func color(color string) string {
