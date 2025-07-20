@@ -93,7 +93,7 @@ func color(color string) string {
 		case "white":
 			return "\033[97m"
 		}
-	} else {
+	} else if color != "" {
 		fmt.Println("Usage: go run . [OPTION] [STRING]\n\nEX: go run . --color=<color> <substring to be colored> \"something\"")
 		os.Exit(0)
 	}
